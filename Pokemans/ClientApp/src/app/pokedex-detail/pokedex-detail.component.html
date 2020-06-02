@@ -1,0 +1,9 @@
+<div>
+  {{myPokemon.name}}
+</div>
+Abilities:
+<ul>
+  <li *ngFor="let a of myPokemon.abilities">
+    <{{a}}>
+  </li>
+</ul>

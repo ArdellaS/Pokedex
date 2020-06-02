@@ -1,0 +1,18 @@
+<h1>Who's that Pokemon?</h1>
+<!--<div *ngFor="let p of pokemon">
+  <app-pokedex-detail [myPokemon]="p"></app-pokedex-detail>
+</div>-->
+
+<h1>Let's get a starter!</h1>
+<button (click)="randPokemon()"value="Let's go!">Click for random pokemon</button>
+<div *ngIf="pokemon">
+  <h1>{{pokemon.name}}</h1>
+  <p>Height: {{pokemon.height}}''--Weight: {{pokemon.weight}}lbs</p>
+
+  <div *ngIf="ability">
+    <p *ngFor="let a of ability">
+
+      {{a.name}}
+    </p>
+  </div>
+</div>
