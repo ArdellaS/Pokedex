@@ -6,6 +6,9 @@ export interface Pokemon {
   type: Types[];
   weight: number;
   sprite: Sprites[];
+  base_experience: number;
+  //move: Moves[];
+  
 }
 
 export interface Ability {
@@ -13,6 +16,9 @@ export interface Ability {
   id: number;
 
 }
+//export interface Moves {
+
+//}
 
 export interface Types {
   name: string;

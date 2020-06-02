@@ -15,13 +15,13 @@ export class PokemonService {
     return this.http.get<Pokemon>(`${this.apiUrl}/pokemon/${id}`);
   }
 
-  getPokemonAbilities(id: number) {
-    return this.http.get<Ability>(`${this.apiUrl}/ability/${id}`);
-  }
+  //getPokemonAbilities() {
+  //  return this.http.get<Ability>(`${this.apiUrl}`);
+  //}
 
-  getPokemonTypes(id: number) {
-    return this.http.get<Types>(`${this.apiUrl}/type/${id}`);
-  }
+  //getPokemonTypes(id: number) {
+  //  return this.http.get<Types>(`${this.apiUrl}/type/${id}`);
+  //}
 
   //getSpriteOfPokemon(url: string) {
   //  return this.http.get<Sprites>(url);

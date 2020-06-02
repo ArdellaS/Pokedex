@@ -4,15 +4,37 @@
 </div>-->
 
 <h1>Let's get a starter!</h1>
-<button (click)="randPokemon()"value="Let's go!">Click for random pokemon</button>
+<button (click)="randPokemon()" value="Let's go!">Click for random pokemon</button>
 <div *ngIf="pokemon">
   <h1>{{pokemon.name}}</h1>
-  <p>Height: {{pokemon.height}}''--Weight: {{pokemon.weight}}lbs</p>
 
-  <div *ngIf="ability">
-    <p *ngFor="let a of ability">
-
-      {{a.name}}
-    </p>
+  <div>
+    <p>Height: {{pokemon.height}}''--Weight: {{pokemon.weight}}lbs</p>
   </div>
+
+  <div>
+    <p>Base exp: {{pokemon.base_experience}}</p>
+  </div>
+
+  <div>
+    Normal:
+    <p>
+      <img src="{{pokemon.sprites.front_default}}" />
+      <img src="{{pokemon.sprites.back_default}}" />
+    </p>
+
+
+    Shiny:
+    <p>
+      <img src="{{pokemon.sprites.front_shiny}}" />
+      <img src="{{pokemon.sprites.back_shiny}}" />
+    </p>
+
+  </div>
+
+  <div>
+    <p>type:{{pokemon.type}}</p>
+  </div>
+  <!--<p>abilities:<p *ngFor="let p of pokemon">{{pokemon.abilities}}</p>-->
+  <p>id:{{pokemon.id}}</p>
 </div>

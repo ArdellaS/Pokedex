@@ -29,33 +29,32 @@ export class PokedexComponent {
       error => console.error(error)
     );
   }
-  getPokemonAbilitiesByID(id: number) {
-    this.pokeService.getPokemonAbilities(id).subscribe(
-      (data: any) => {
-        this.ability = data;
-        console.log(this.ability);
-      },
-      error => console.error(error)
-    );
-  }
+  //getPokemonAbilitiesByID() {
+  //  this.pokeService.getPokemonAbilities().subscribe(
+  //    (data: any) => {
+  //      this.ability = data;
+  //      console.log(this.ability);
+  //    },
+  //    error => console.error(error)
+  //  );
+  //}
 
-  getPokemonTypesByID(id: number) {
-    this.pokeService.getPokemonTypes(id).subscribe(
-      (data: any) => {
-        this.type = data;
-        console.log(this.type);
-      },
-      error => console.error(error)
-    );
-  }
+  //getPokemonTypesByID(id: number) {
+  //  this.pokeService.getPokemonTypes(id).subscribe(
+  //    (data: any) => {
+  //      this.type = data;
+  //      console.log(this.type);
+  //    },
+  //    error => console.error(error)
+  //  );
+  //}
   randPokemon() {
     let id = this.randID();
     this.getPokemonByID(id);
-    this.getPokemonAbilitiesByID(id);
-    this.getPokemonTypesByID(id);
-    console.log(id);
-    console.log(this.ability);
-    console.log(this.type);
+    //this.getPokemonAbilitiesByID();
+//    this.getPokemonTypesByID(id);
+    console.log(this.pokemon);
+    
   }
   ngOnInit() {
     
