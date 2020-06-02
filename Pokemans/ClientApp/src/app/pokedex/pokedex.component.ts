@@ -17,7 +17,7 @@ export class PokedexComponent {
   constructor(private pokeService: PokemonService) { }
 
   randID():number {
-    return Math.floor(Math.random() * 151);
+    return Math.floor(Math.random() * 801);
   }
 
   getPokemonByID(id:number) {
