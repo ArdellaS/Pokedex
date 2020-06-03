@@ -14,3 +14,22 @@ code {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+
+.title {
+  background: #004a85;
+  color: #03cffc;
+  padding: 15px 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+}
+
+img{
+    height:200px;
+    width:200px
+}
+
+body{
+    background-color:#c7f7ff
+
+}
