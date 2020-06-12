@@ -29,15 +29,15 @@ export class PokedexComponent {
       error => console.error(error)
     );
   }
-  //getPokemonAbilitiesByID() {
-  //  this.pokeService.getPokemonAbilities().subscribe(
-  //    (data: any) => {
-  //      this.ability = data;
-  //      console.log(this.ability);
-  //    },
-  //    error => console.error(error)
-  //  );
-  //}
+  getPokemonAbilitiesByName(name: string) {
+    this.pokeService.getPokemonAbilities(name).subscribe(
+      (data: any) => {
+        this.ability = data;
+        console.log(this.ability);
+      },
+      error => console.error(error)
+    );
+  }
 
   //getPokemonTypesByID(id: number) {
   //  this.pokeService.getPokemonTypes(id).subscribe(
@@ -50,8 +50,9 @@ export class PokedexComponent {
   //}
   randPokemon() {
     let id = this.randID();
-    this.getPokemonByID(id);
-    //this.getPokemonAbilitiesByID();
+    let newMon = this.getPokemonByID(id);
+    console.log(newMon);
+    //this.getPokemonAbilitiesByID(this.getPokemonByID.name);
 //    this.getPokemonTypesByID(id);
     console.log(this.pokemon);
     

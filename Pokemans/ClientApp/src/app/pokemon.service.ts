@@ -15,9 +15,9 @@ export class PokemonService {
     return this.http.get<Pokemon>(`${this.apiUrl}/pokemon/${id}`);
   }
 
-  //getPokemonAbilities() {
-  //  return this.http.get<Ability>(`${this.apiUrl}`);
-  //}
+  getPokemonAbilities(name:string) {
+    return this.http.get<Ability>(`${this.apiUrl}/ability/${name}`);
+  }
 
   //getPokemonTypes(id: number) {
   //  return this.http.get<Types>(`${this.apiUrl}/type/${id}`);
