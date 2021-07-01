@@ -19,12 +19,11 @@
         <img src="{{pokemon.sprites.back_default}}" />
 
       </p>
+
       <p *ngIf="pokemon.sprites.front_female">
         <span>&#9792;</span>
         <img src="{{pokemon.sprites.front_female}}" />
         <img src="{{pokemon.sprites.back_female}}" />
-
-
       </p>
     </div>
 
@@ -34,14 +33,13 @@
         <span>&#9794;</span>
         <img src="{{pokemon.sprites.front_shiny}}" />
         <img src="{{pokemon.sprites.back_shiny}}" />
-
       </p>
 
       <p *ngIf="pokemon.sprites.front_shiny_female">
         <span>&#9792;</span>
         <img src="{{pokemon.sprites.front_shiny_female}}" />
         <img src="{{pokemon.sprites.back_shiny_female}}" />
-       </p>
+      </p>
     </div>
   </div>
 
@@ -49,10 +47,10 @@
     <div class="col">
       <h2 class="title">Stats:</h2>
       <p>
-        Height: {{(pokemon.height*4 )/12}}"
+        Height: {{pokemonHeight(pokemon.height)}}"
       </p>
       <p>
-        Weight: {{pokemon.weight/4.6}}lbs
+        Weight: {{pokemonWeight(pokemon.weight)}}lbs
       </p>
       <p>
         Base exp: {{pokemon.base_experience}}
@@ -63,12 +61,20 @@
       <h2 class="title">Abilities:</h2>
       <div class="col">
         <p>{{pokemon.abilities[0].ability.name}}</p>
-        <a *ngIf="pokemon.abilities[1]" (click)="getPokemonAbilitiesByName(pokemon.abilities[1].ability.name)">{{pokemon.abilities[1].ability.name}}</a>
+        <a *ngIf="pokemon.abilities[1]">{{pokemon.abilities[1].ability.name}}</a>
         <p *ngIf="pokemon.abilities[2]">{{pokemon.abilities[2].ability.name}}</p>
         <p *ngIf="pokemon.abilities[3]">{{pokemon.abilities[3].ability.name}}</p>
         <p>{{pokemon.abilities[3].ability.url.effect}}</p>
       </div>
     </div>
 
+  </div>
+
+  <div class="row">
+    <h2 class="title">Fun fact:</h2>
+    <div class="col">
+      <p *ngIf="detail.descriptions[2]">{{detail.descriptions[2].description}}</p>
+      <p *ngIf="detail.highest_stat.name">Their highest stat is would be their: {{detail.highest_stat.name}}</p>
+    </div>
   </div>
 </div>
