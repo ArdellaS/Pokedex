@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Pokemon, Ability, Characteristics } from './interfaces/pokemon';
+import { Pokemon, Ability, Types, Sprites } from './interfaces/pokemon';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -19,7 +19,11 @@ export class PokemonService {
     return this.http.get<Ability>(`${this.apiUrl}/ability/${name}`);
   }
 
-  getDetail(id: number) {
-    return this.http.get<Characteristics>(`${this.apiUrl}/characteristic/${id}`);
-  }
+  //getPokemonTypes(id: number) {
+  //  return this.http.get<Types>(`${this.apiUrl}/type/${id}`);
+  //}
+
+  //getSpriteOfPokemon(url: string) {
+  //  return this.http.get<Sprites>(url);
+  //}
 }
